@@ -1,3 +1,4 @@
+pipeline {
 node('master'){
     stage('stage1'){
     def commit = sh (returnStdout: true, script: '''echo hi
@@ -9,5 +10,6 @@ node('master'){
     echo "${commit[-1]} "
 
     }
+}
 }
 
