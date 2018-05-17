@@ -1,1 +1,6 @@
-echo 'hola'
+node {
+     stage ('Checkout') {
+               echo 'test'
+        }
+
+}
