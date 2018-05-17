@@ -1,6 +1,7 @@
+def projectProperties = [
+    [$class: 'BuildDiscarderProperty',strategy: [$class: 'LogRotator', numToKeepStr: '10']],
+]
 node {
-options { buildDiscarder(logRotator(numToKeepStr: '1')) }
-
      stage ('Checkout') {
                sh 'echo test'
         }
