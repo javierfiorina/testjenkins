@@ -1,9 +1,7 @@
-import groovy.json.JsonOutput
-import java.util.Optional
-import hudson.tasks.test.AbstractTestResultAction
-import hudson.model.Actionable
-import hudson.tasks.junit.CaseResult
 pipeline {
+ options {
+    buildDiscarder(logRotator(numToKeepStr: '30', artifactNumToKeepStr: '30'))
+  }
     agent any
 
     stages {
